@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento Cancelado</title>
+    <link rel="stylesheet" href="css/style578f.css">
+    <link rel="stylesheet" href="css/elementor-icons.minb683.css">
+    <style>
+        .cancel-container {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .cancel-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 60px 40px;
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .cancel-icon {
+            width: 80px;
+            height: 80px;
+            background: #ff6b6b;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+        }
+        
+        .cancel-icon i {
+            color: #fff;
+            font-size: 40px;
+        }
+        
+        .cancel-title {
+            font-size: 28px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 16px;
+        }
+        
+        .cancel-message {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+        
+        .action-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 14px 30px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+        
+        .btn-primary {
+            background: #ee4d2d;
+            color: #fff;
+        }
+        
+        .btn-primary:hover {
+            background: #d73527;
+            color: #fff;
+        }
+        
+        .btn-secondary {
+            background: #f8f9fa;
+            color: #333;
+            border: 1px solid #ddd;
+        }
+        
+        .btn-secondary:hover {
+            background: #e9ecef;
+            color: #333;
+        }
+        
+        @media (max-width: 480px) {
+            .cancel-card {
+                padding: 40px 20px;
+            }
+            
+            .cancel-title {
+                font-size: 24px;
+            }
+            
+            .action-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cancel-container">
+        <div class="cancel-card">
+            <div class="cancel-icon">
+                <i class="eicon-close"></i>
+            </div>
+            
+            <h1 class="cancel-title">Pagamento Cancelado</h1>
+            
+            <p class="cancel-message">
+                Seu pagamento foi cancelado. Não se preocupe, nenhuma cobrança foi realizada. Você pode tentar novamente quando quiser.
+            </p>
+            
+            <div class="action-buttons">
+                <a href="checkout.html" class="btn btn-primary">Tentar Novamente</a>
+                <a href="index.html" class="btn btn-secondary">Voltar ao Início</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

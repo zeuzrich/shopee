@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Finalizar Compra</title>
+    <link rel="stylesheet" href="css/style578f.css">
+    <link rel="stylesheet" href="css/checkout.css">
+    <link rel="stylesheet" href="css/elementor-icons.minb683.css">
+    <script src="js/jquery.minf43b.js"></script>
+</head>
+<body>
+    <div class="checkout-container">
+        <!-- Header -->
+        <header class="checkout-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo">
+                        <img src="images/LP-3-9-1-300x35.webp" alt="Logo" class="logo-img">
+                    </div>
+                    <div class="checkout-steps">
+                        <div class="step active">
+                            <span class="step-number">1</span>
+                            <span class="step-text">Carrinho</span>
+                        </div>
+                        <div class="step-divider"></div>
+                        <div class="step active">
+                            <span class="step-number">2</span>
+                            <span class="step-text">Checkout</span>
+                        </div>
+                        <div class="step-divider"></div>
+                        <div class="step">
+                            <span class="step-number">3</span>
+                            <span class="step-text">Pagamento</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="checkout-main">
+            <div class="container">
+                <div class="checkout-content">
+                    <!-- Left Column - Forms -->
+                    <div class="checkout-left">
+                        <!-- Shipping Address -->
+                        <div class="checkout-section">
+                            <div class="section-header">
+                                <i class="eicon-map-pin"></i>
+                                <h3>Endereço de Entrega</h3>
+                            </div>
+                            <div class="address-form">
+                                <div class="form-row">
+                                    <div class="form-group full-width">
+                                        <label for="cep">CEP *</label>
+                                        <div class="input-with-button">
+                                            <input type="text" id="cep" name="cep" placeholder="00000-000" maxlength="9" required>
+                                            <button type="button" class="btn-search-cep">Buscar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="street">Rua *</label>
+                                        <input type="text" id="street" name="street" required>
+                                    </div>
+                                    <div class="form-group small">
+                                        <label for="number">Número *</label>
+                                        <input type="text" id="number" name="number" required>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="complement">Complemento</label>
+                                        <input type="text" id="complement" name="complement">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="neighborhood">Bairro *</label>
+                                        <input type="text" id="neighborhood" name="neighborhood" required>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="city">Cidade *</label>
+                                        <input type="text" id="city" name="city" required>
+                                    </div>
+                                    <div class="form-group small">
+                                        <label for="state">Estado *</label>
+                                        <select id="state" name="state" required>
+                                            <option value="">Selecione</option>
+                                            <option value="AC">AC</option>
+                                            <option value="AL">AL</option>
+                                            <option value="AP">AP</option>
+                                            <option value="AM">AM</option>
+                                            <option value="BA">BA</option>
+                                            <option value="CE">CE</option>
+                                            <option value="DF">DF</option>
+                                            <option value="ES">ES</option>
+                                            <option value="GO">GO</option>
+                                            <option value="MA">MA</option>
+                                            <option value="MT">MT</option>
+                                            <option value="MS">MS</option>
+                                            <option value="MG">MG</option>
+                                            <option value="PA">PA</option>
+                                            <option value="PB">PB</option>
+                                            <option value="PR">PR</option>
+                                            <option value="PE">PE</option>
+                                            <option value="PI">PI</option>
+                                            <option value="RJ">RJ</option>
+                                            <option value="RN">RN</option>
+                                            <option value="RS">RS</option>
+                                            <option value="RO">RO</option>
+                                            <option value="RR">RR</option>
+                                            <option value="SC">SC</option>
+                                            <option value="SP">SP</option>
+                                            <option value="SE">SE</option>
+                                            <option value="TO">TO</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Shipping Options -->
+                        <div class="checkout-section">
+                            <div class="section-header">
+                                <i class="eicon-cart"></i>
+                                <h3>Opções de Entrega</h3>
+                            </div>
+                            <div class="shipping-options" id="shipping-options">
+                                <div class="shipping-loading">
+                                    <p>Informe o CEP para calcular o frete</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Customer Info -->
+                        <div class="checkout-section">
+                            <div class="section-header">
+                                <i class="eicon-person"></i>
+                                <h3>Dados Pessoais</h3>
+                            </div>
+                            <div class="customer-form">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="fullName">Nome Completo *</label>
+                                        <input type="text" id="fullName" name="fullName" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="document">CPF *</label>
+                                        <input type="text" id="document" name="document" placeholder="000.000.000-00" maxlength="14" required>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="email">E-mail *</label>
+                                        <input type="email" id="email" name="email" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="phone">Telefone *</label>
+                                        <input type="tel" id="phone" name="phone" placeholder="(00) 00000-0000" maxlength="15" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column - Order Summary -->
+                    <div class="checkout-right">
+                        <div class="order-summary">
+                            <div class="summary-header">
+                                <h3>Resumo do Pedido</h3>
+                            </div>
+                            
+                            <!-- Product Item -->
+                            <div class="product-item">
+                                <div class="product-image">
+                                    <img src="images/LP-3-4-300x284.webp" alt="Produto">
+                                </div>
+                                <div class="product-details">
+                                    <h4>Kit Completo de Cuidados</h4>
+                                    <p class="product-variant">Tamanho: Padrão</p>
+                                    <div class="quantity-controls">
+                                        <button type="button" class="qty-btn" onclick="updateQuantity(-1)">-</button>
+                                        <span class="quantity" id="quantity">1</span>
+                                        <button type="button" class="qty-btn" onclick="updateQuantity(1)">+</button>
+                                    </div>
+                                </div>
+                                <div class="product-price">
+                                    <span class="price">R$ 197,00</span>
+                                </div>
+                            </div>
+
+                            <!-- Coupon -->
+                            <div class="coupon-section">
+                                <div class="coupon-input">
+                                    <input type="text" id="coupon" placeholder="Código de desconto">
+                                    <button type="button" class="btn-apply-coupon">Aplicar</button>
+                                </div>
+                            </div>
+
+                            <!-- Price Breakdown -->
+                            <div class="price-breakdown">
+                                <div class="price-row">
+                                    <span>Subtotal</span>
+                                    <span id="subtotal">R$ 197,00</span>
+                                </div>
+                                <div class="price-row">
+                                    <span>Frete</span>
+                                    <span id="shipping-cost">A calcular</span>
+                                </div>
+                                <div class="price-row discount-row" id="discount-row" style="display: none;">
+                                    <span>Desconto</span>
+                                    <span id="discount-amount">-R$ 0,00</span>
+                                </div>
+                                <div class="price-row total-row">
+                                    <span>Total</span>
+                                    <span id="total">R$ 197,00</span>
+                                </div>
+                            </div>
+
+                            <!-- Payment Button -->
+                            <button type="button" class="btn-checkout" id="btn-checkout" disabled>
+                                <i class="eicon-lock"></i>
+                                Finalizar Compra
+                            </button>
+
+                            <!-- Security Info -->
+                            <div class="security-info">
+                                <div class="security-item">
+                                    <i class="eicon-check-circle"></i>
+                                    <span>Compra 100% segura</span>
+                                </div>
+                                <div class="security-item">
+                                    <i class="eicon-shield"></i>
+                                    <span>Dados protegidos</span>
+                                </div>
+                                <div class="security-item">
+                                    <i class="eicon-undo"></i>
+                                    <span>7 dias para troca</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Loading Modal -->
+    <div class="loading-modal" id="loading-modal">
+        <div class="loading-content">
+            <div class="spinner"></div>
+            <p>Processando pagamento...</p>
+        </div>
+    </div>
+
+    <script src="js/checkout.js"></script>
+</body>
+</html>
